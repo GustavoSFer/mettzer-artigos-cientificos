@@ -19,7 +19,6 @@ function Registration() {
       && isValidPassword(password, MIN_PASSWORD_LANGTH)
       && isValidName(nome)
     ) {
-      console.log('ok');
       setMsgErro(false);
       history('/main');
     } else {
@@ -57,7 +56,7 @@ function Registration() {
           </p>
           {
             msgErro
-              && <p className="text-danger">Dados incorreto! Verificar todos os campos.</p>
+              && <p className="text-danger">Dados incorretos! Verifique todos os campos.</p>
             }
         </section>
         <Button click={handleClick} sty="w-100">Cadastrar</Button>

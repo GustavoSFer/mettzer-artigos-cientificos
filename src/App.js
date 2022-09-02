@@ -8,6 +8,7 @@ function App() {
   const contextValue = {
     MIN_PASSWORD_LANGTH,
   }
+
   return (
     <MyContext.Provider value={contextValue}>
       <div className="App">

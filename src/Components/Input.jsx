@@ -5,7 +5,7 @@ function Input({
   type, name, value, handleChange, sty,
 }) {
   return (
-    <label htmlFor={name} className="input-group mt-3">
+    <label htmlFor={name} className="mt-2">
       <input
         type={type}
         id={name}

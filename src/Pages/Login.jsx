@@ -1,9 +1,12 @@
 import React from 'react';
+import Button from '../Components/Button';
+import Input from '../Components/Input';
 
 function Login() {
   return (
     <div>
-      Login
+      <Input />
+      <Button>Verificando</Button>
     </div>
   );
 }

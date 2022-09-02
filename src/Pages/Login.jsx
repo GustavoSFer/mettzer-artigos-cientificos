@@ -17,7 +17,7 @@ function Login() {
     if (isValidEmail(email) && isValidPassword(password, MIN_PASSWORD_LANGTH)) {
       setEmail('');
       setPassword('');
-      history('/loja');
+      history('/main');
     } else {
       setMsgErro(true);
     }
@@ -48,7 +48,7 @@ function Login() {
       <p className="txt-cadastro">
         Não possui cadastro?
       </p>
-      <Button click={() => history('/cadastro')} sty="w-100"> Cadastrar</Button>
+      <Button click={() => history('/registration')} sty="w-100"> Cadastrar</Button>
     </main>
   );
 }

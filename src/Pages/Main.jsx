@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
+import RequestApi from '../Service';
 import Header from '../Components/Header';
 import Input from '../Components/Input';
 import Button from '../Components/Button';
 
 function Main() {
   const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
+
+  const handleClick = () => {
+    console.log('clicado');
+    RequestApi(search, page);
+    console.log(setPage);
+  };
+
   return (
     <div className="container">
       <Header />
@@ -15,7 +24,7 @@ function Main() {
           handleChange={(e) => setSearch(e.target.value)}
           value={search}
         />
-        <Button sty="m-3">Pesquisar</Button>
+        <Button click={handleClick} sty="m-3">Pesquisar</Button>
       </div>
     </div>
   );

@@ -39,11 +39,11 @@ function Login() {
           handleChange={(e) => setPassword(e.target.value)}
           value={password}
         />
-        <p className="text-end">
+        <p className="text-end min-password">
           {`Caracteres minimo para senha: ${MIN_PASSWORD_LANGTH}`}
         </p>
         <Button click={handleClick} sty="w-100" dataTestId="btn-entrar">Entrar</Button>
-        { msgErro && <p className="text-danger">E-mail ou senha incorreto!</p> }
+        { msgErro && <p className="">E-mail ou senha incorreto!</p> }
       </section>
       <p className="txt-cadastro">
         Não possui cadastro?

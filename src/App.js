@@ -3,7 +3,11 @@ import './App.css';
 import Routers from './Routes';
 
 function App() {
-  const contextValue = {}
+  const MIN_PASSWORD_LANGTH = 6;
+
+  const contextValue = {
+    MIN_PASSWORD_LANGTH,
+  }
   return (
     <MyContext.Provider value={contextValue}>
       <div className="App">

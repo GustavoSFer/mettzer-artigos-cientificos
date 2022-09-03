@@ -16,9 +16,9 @@ function Main() {
   const handleClick = async () => {
     setLoading(true);
     const result = await RequestApi(search);
-    console.log(result);
     setLoading(false);
     setData(result);
+    setSearch('');
   };
 
   return (

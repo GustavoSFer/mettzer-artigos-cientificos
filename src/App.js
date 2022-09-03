@@ -9,6 +9,27 @@ function App() {
   const [getFavorites, setFavorites] = useState([]);
   const [alter, setAlter] = useState(false);
 
+  const addLocalStorage = (add) => {
+    setAlter(!alter);
+    const storage = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const newItem = storage.filter(({ id }) => id !== add._source.id);
+    const objFavorite = {
+      id: add._source.id,
+      title: add._source.title,
+      description: add._source.description,
+    };
+    localStorage.setItem('favorites', JSON.stringify([...newItem, objFavorite]));
+  };
+
+  const removeLocalStorage = (add) => {
+    setAlter(!alter);
+    const storage = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const newFavorites = storage.filter(({ id }) => id !== add._source.id);
+    localStorage.setItem('favorites', JSON.stringify([...newFavorites]));
+  };
+
   useEffect(() => {
     const storage = JSON.parse(localStorage.getItem('favorites')) || [];
     setFavorites(storage);
@@ -18,7 +39,8 @@ function App() {
     MIN_PASSWORD_LANGTH,
     data, setData,
     getFavorites, setFavorites,
-    alter, setAlter,
+    addLocalStorage, removeLocalStorage,
+    alter,
   };
 
   return (

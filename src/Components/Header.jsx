@@ -9,7 +9,7 @@ function Header() {
           <img src="#" alt="logo" />
         </Link>
 
-        <Link to="favorito">Favoritos</Link>
+        <Link to="/favoritos">Favoritos</Link>
       </nav>
     </header>
   );

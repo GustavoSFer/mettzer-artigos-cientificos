@@ -22,20 +22,22 @@ function Main() {
   };
 
   return (
-    <div className="container">
+    <div className="corpo-color">
       <Header />
-      <div className="mt-3 container-ver">
-        <Input
-          type="text"
-          name="search"
-          handleChange={(e) => setSearch(e.target.value)}
-          value={search}
-        />
-        <Button click={handleClick} sty="m-3">Pesquisar</Button>
-      </div>
-      { loading && <Loading /> }
-      <div className="row">
-        { data.length > 0 && data.map((item) => <Card item={item} key={item._source.id} />) }
+      <div className="container">
+        <div className="mt-4 container-ver">
+          <Input
+            type="text"
+            name="search"
+            handleChange={(e) => setSearch(e.target.value)}
+            value={search}
+          />
+          <Button click={handleClick} sty="m-3">Pesquisar</Button>
+        </div>
+        { loading && <Loading /> }
+        <div className="row">
+          { data.length > 0 && data.map((item) => <Card item={item} key={item._source.id} />) }
+        </div>
       </div>
     </div>
   );

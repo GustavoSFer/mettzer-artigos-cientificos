@@ -12,14 +12,16 @@ function Favoritos() {
   } = useContext(MyContext);
 
   return (
-    <div className="container">
+    <div className="corpo-color">
       <Header />
-      <div className="mt-4">
-        {
-          getFavorites.length > 0
-            ? getFavorites.map((item) => <CardFavorites item={item} key={item.id} />)
-            : <h1 className="mt-5">Não possui favoritos!</h1>
-        }
+      <div className="container">
+        <div className="mt-4">
+          {
+            getFavorites.length > 0
+              ? getFavorites.map((item) => <CardFavorites item={item} key={item.id} />)
+              : <h1 className="mt-5">Não possui favoritos!</h1>
+          }
+        </div>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import Input from '../Components/Input';
 import Button from '../Components/Button';
 import Loading from '../Components/Loading';
 import MyContext from '../MyContext/MyContext';
+import Card from '../Components/Card';
 
 function Main() {
   const [search, setSearch] = useState('');
@@ -33,8 +34,8 @@ function Main() {
         <Button click={handleClick} sty="m-3">Pesquisar</Button>
       </div>
       { loading && <Loading /> }
-      <div>
-        { data.length > 0 && <h1>tem</h1> }
+      <div className="row">
+        { data.length > 0 && data.map((item) => <Card item={item} key={item._source.id} />) }
       </div>
     </div>
   );

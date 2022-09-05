@@ -8,6 +8,13 @@ function App() {
   const [data, setData] = useState([]);
   const [getFavorites, setFavorites] = useState([]);
   const [alter, setAlter] = useState(false);
+  const [itensPerPage, setItemPerPage] = useState(5);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const pages = Math.ceil(data.length / itensPerPage);
+  const startIndex = currentPage * itensPerPage;
+  const endIndex = startIndex + itensPerPage;
+  const currentItens = data.slice(startIndex, endIndex);
 
   const addLocalStorage = (add) => {
     setAlter(!alter);
@@ -41,6 +48,7 @@ function App() {
     getFavorites, setFavorites,
     addLocalStorage, removeLocalStorage,
     alter,
+    pages, currentItens, setCurrentPage,
   };
 
   return (

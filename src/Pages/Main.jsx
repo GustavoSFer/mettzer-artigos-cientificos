@@ -10,7 +10,9 @@ import Card from '../Components/Card';
 function Main() {
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
-  const { data, setData } = useContext(MyContext);
+  const {
+    data, setData, pages, currentItens, setCurrentPage,
+  } = useContext(MyContext);
   // const [page, setPage] = useState(1);
 
   const handleClick = async () => {
@@ -36,8 +38,25 @@ function Main() {
         </div>
         { loading && <Loading /> }
         <div className="row">
-          { data.length > 0 && data.map((item) => <Card item={item} key={item._source.id} />) }
+          {
+            data.length > 0 && currentItens
+              .map((item) => <Card item={item} key={item._source.id} />)
+          }
         </div>
+      </div>
+      <div>
+        {
+          Array.from(Array(pages), (item, index) => (
+            <button
+              key={index}
+              type="button"
+              value={index}
+              onClick={(e) => setCurrentPage(Number(e.target.value))}
+            >
+              {index + 1}
+            </button>
+          ))
+        }
       </div>
     </div>
   );

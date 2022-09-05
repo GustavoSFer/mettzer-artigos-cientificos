@@ -6,6 +6,7 @@ import Button from '../Components/Button';
 import Loading from '../Components/Loading';
 import MyContext from '../MyContext/MyContext';
 import Card from '../Components/Card';
+import SelectQuantityPerPage from '../Components/SelectQuantityPerPage';
 
 function Main() {
   const [search, setSearch] = useState('');
@@ -58,6 +59,7 @@ function Main() {
           ))
         }
       </div>
+      <SelectQuantityPerPage />
     </div>
   );
 }

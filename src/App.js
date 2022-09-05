@@ -42,6 +42,10 @@ function App() {
     setFavorites(storage);
   }, []);
 
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [itensPerPage]);
+
   const contextValue = {
     MIN_PASSWORD_LANGTH,
     data, setData,
@@ -49,6 +53,7 @@ function App() {
     addLocalStorage, removeLocalStorage,
     alter,
     pages, currentItens, setCurrentPage,
+    setItemPerPage,
   };
 
   return (

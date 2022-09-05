@@ -15,4 +15,9 @@ describe('Verificando tela de login, se os elementos estão na tela', () => {
     const password = screen.getByTestId('password');
     expect(password).toBeInTheDocument();
   });
+  it('Verificando se tem dois "Button" na tela de login', () => {
+    render(<MemoryRouter><App /></MemoryRouter>);
+    const buttons = screen.getAllByRole('button');
+    expect(buttons).toHaveLength(2);
+  });
 });

@@ -7,7 +7,12 @@ import App from '../App';
 describe('Verificando tela de login, se os elementos estão na tela', () => {
   it('Verificndo se tem o input email na tela de login', () => {
     render(<MemoryRouter><App /></MemoryRouter>);
-    const inputEmail = screen.getByTestId('emails');
+    const inputEmail = screen.getByTestId('email');
     expect(inputEmail).toBeInTheDocument();
+  });
+  it('Verificando se tem o input password na tela de login', () => {
+    render(<MemoryRouter><App /></MemoryRouter>);
+    const password = screen.getByTestId('password');
+    expect(password).toBeInTheDocument();
   });
 });

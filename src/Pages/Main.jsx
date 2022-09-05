@@ -37,7 +37,7 @@ function Main() {
             handleChange={(e) => setSearch(e.target.value)}
             value={search}
           />
-          <Button click={handleClick} sty="m-3">Pesquisar</Button>
+          <Button click={handleClick} sty="m-3" dataTestId="btn-pesquisar">Pesquisar</Button>
         </div>
         { loading && <Loading /> }
         <div className="row m-1">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Detais from '../Pages/Detais';
 import Favoritos from '../Pages/Favoritos';
 import Login from '../Pages/Login';
 import Main from '../Pages/Main';
@@ -12,6 +13,7 @@ function Routers() {
       <Route path="/registration" element={<Registration />} />
       <Route path="/main" element={<Main />} />
       <Route path="/favoritos" element={<Favoritos />} />
+      <Route path="/detais/:id" element={<Detais />} />
     </Routes>
   );
 }

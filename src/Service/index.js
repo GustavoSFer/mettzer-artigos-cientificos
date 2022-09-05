@@ -6,4 +6,10 @@ const RequestApi = async (search) => {
   return result.data;
 };
 
+export const RequestQuery = async (id) => {
+  const respons = await fetch(`https://core.ac.uk:443/api-v2/articles/get/${id}?apiKey=${key}`);
+  const result = await respons.json();
+  return result.data;
+};
+
 export default RequestApi;

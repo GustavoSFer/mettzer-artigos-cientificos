@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import coracao1 from '../imagens/coracao1.png';
 import coracao2 from '../imagens/coracao2.png';
@@ -40,8 +41,11 @@ function Card({ item }) {
         <h6 className="card-subtitle mt-4 text-muted">
           {item._source.description !== null && item._source.description.slice(0, 170)}
         </h6>
-
-        <p className="text-end mt-2" style={{ fontSize: '12px' }}>Continuar lendo...</p>
+        <Link to={`/detais/${item._source.id}`} item={item}>
+          <p className="text-end mt-2" style={{ fontSize: '12px' }}>
+            Ver detalhes...
+          </p>
+        </Link>
         <p className="card-text text-start" style={{ fontSize: '12px' }}>
           Author:
           <span style={{ fontSize: '16px' }}>{` ${item._source.authors[0]}`}</span>

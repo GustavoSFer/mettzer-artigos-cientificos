@@ -17,7 +17,6 @@ function Main() {
     pages, itensPerPage, setItemPerPage,
     currentItens, setCurrentPage, currentPage,
   } = useContext(MyContext);
-  // const [page, setPage] = useState(1);
 
   const handleClick = async () => {
     setLoading(true);
@@ -48,7 +47,7 @@ function Main() {
           }
         </div>
       </div>
-      <div className="d-flex justify-content-evenly m-5">
+      <div className="d-flex justify-content-between m-5">
         <div />
         <div>
           <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />

@@ -31,10 +31,6 @@ function CardFavorites({ item }) {
           <h6 className="card-subtitle mt-4 text-muted">
             {item.description}
           </h6>
-          <p className="card-text">
-            {/* { item._source.authors.map((author) => <p>{author}</p>) } */}
-          </p>
-          {/* <a href="1" className="card-link" _blank>{item._source.urls}</a> */}
 
           <div className="text-end">
             <Button click={() => remover(item)}>

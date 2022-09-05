@@ -33,7 +33,7 @@ function Favoritos() {
           }
         </div>
 
-        <div className="d-flex justify-content-evenly m-5">
+        <div className="d-flex justify-content-between m-5">
           <div />
           <div>
             <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />

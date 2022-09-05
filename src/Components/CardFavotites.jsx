@@ -1,4 +1,5 @@
 import React, { useEffect, useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import coracao2 from '../imagens/coracao2.png';
@@ -24,22 +25,24 @@ function CardFavorites({ item }) {
   };
   return (
     <div className="card col-3 m-2" style={width}>
-      <div className="card-body">
-        <h5 className="card-title">{item.title}</h5>
-        <h6 className="card-subtitle mt-4 text-muted">
-          {item.description}
-        </h6>
-        <p className="card-text">
-          {/* { item._source.authors.map((author) => <p>{author}</p>) } */}
-        </p>
-        {/* <a href="1" className="card-link" _blank>{item._source.urls}</a> */}
+      <Link to={`/detais/${item.id}`} className="text-decoration-none">
+        <div className="card-body">
+          <h5 className="card-title text-body">{item.title}</h5>
+          <h6 className="card-subtitle mt-4 text-muted">
+            {item.description}
+          </h6>
+          <p className="card-text">
+            {/* { item._source.authors.map((author) => <p>{author}</p>) } */}
+          </p>
+          {/* <a href="1" className="card-link" _blank>{item._source.urls}</a> */}
 
-        <div className="text-end">
-          <Button click={() => remover(item)}>
-            <img src={coracao2} alt="favoritar" />
-          </Button>
+          <div className="text-end">
+            <Button click={() => remover(item)}>
+              <img src={coracao2} alt="favoritar" />
+            </Button>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

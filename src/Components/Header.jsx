@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../imagens/logo.png';
+import coracao2 from '../imagens/coracao2.png';
 import '../Css/Header.css';
 
 function Header() {
@@ -16,7 +17,9 @@ function Header() {
           </Link>
         </div>
 
-        <Link to="/favoritos">Favoritos</Link>
+        <Link to="/favoritos">
+          <img src={coracao2} alt="favoritos" className="mt-2" />
+        </Link>
       </nav>
     </header>
   );

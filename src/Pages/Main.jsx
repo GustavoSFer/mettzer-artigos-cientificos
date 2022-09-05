@@ -41,7 +41,7 @@ function Main() {
           <Button click={handleClick} sty="m-3">Pesquisar</Button>
         </div>
         { loading && <Loading /> }
-        <div className="row">
+        <div className="row m-1">
           {
             data.length > 0 && currentItens
               .map((item) => <Card item={item} key={item._source.id} />)

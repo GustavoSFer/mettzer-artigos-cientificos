@@ -27,27 +27,39 @@ function Card({ item }) {
   return (
     <div className="card col-3 m-2" style={width}>
       <div className="card-body">
-        <p className="text-start">
+
+        <p className="text-start" style={{ fontSize: '12px' }}>
           type:
-          <span>
+          <span style={{ fontSize: '16px' }}>
             {` ${item._type}`}
           </span>
         </p>
+
         <h5 className="card-title">{item._source.title}</h5>
+
         <h6 className="card-subtitle mt-4 text-muted">
-          {item._source.description}
+          {item._source.description !== null && item._source.description.slice(0, 170)}
         </h6>
-        <p className="text-end mt-2">Continuar lendo...</p>
-        <p className="card-text">
-          {/* { item._source.authors.map((author) => <p>{author}</p>) } */}
+
+        <p className="text-end mt-2" style={{ fontSize: '12px' }}>Continuar lendo...</p>
+        <p className="card-text text-start" style={{ fontSize: '12px' }}>
+          Author:
+          <span style={{ fontSize: '16px' }}>{` ${item._source.authors[0]}`}</span>
         </p>
-        {/* <a href="1" className="card-link" _blank>{item._source.urls}</a> */}
+
+        <p className="text-start">
+          {
+            item._source.urls.length > 0
+            && <a href={item._source.urls[0]} className="card-link" target="_blank" rel="noopener noreferrer">Acessar Url</a>
+          }
+        </p>
 
         <div className="text-end">
           <Button click={() => (isFavorite ? removeLocalStorage(item) : addLocalStorage(item))}>
             <img src={isFavorite ? coracao2 : coracao1} alt="favoritar" />
           </Button>
         </div>
+
       </div>
     </div>
   );
@@ -60,8 +72,8 @@ Card.propTypes = {
       title: PropTypes.string,
       description: PropTypes.string,
       id: PropTypes.string,
-      // authors: PropTypes.arrayOf(PropTypes.string),
-      // urls: PropTypes.arrayOf,
+      authors: PropTypes.arrayOf(PropTypes.string),
+      urls: PropTypes.arrayOf(PropTypes.string),
     }),
   }).isRequired,
 };

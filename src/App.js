@@ -52,7 +52,8 @@ function App() {
     getFavorites, setFavorites,
     addLocalStorage, removeLocalStorage,
     alter,
-    pages, currentItens, setCurrentPage,
+    pages, itensPerPage,
+    currentItens, setCurrentPage,
     setItemPerPage,
   };
 

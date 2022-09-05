@@ -7,12 +7,15 @@ import Loading from '../Components/Loading';
 import MyContext from '../MyContext/MyContext';
 import Card from '../Components/Card';
 import SelectQuantityPerPage from '../Components/SelectQuantityPerPage';
+import Pagination from '../Components/Pagination';
 
 function Main() {
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
   const {
-    data, setData, pages, currentItens, setCurrentPage,
+    data, setData,
+    pages, itensPerPage, setItemPerPage,
+    currentItens, setCurrentPage,
   } = useContext(MyContext);
   // const [page, setPage] = useState(1);
 
@@ -45,21 +48,8 @@ function Main() {
           }
         </div>
       </div>
-      <div>
-        {
-          Array.from(Array(pages), (item, index) => (
-            <button
-              key={index}
-              type="button"
-              value={index}
-              onClick={(e) => setCurrentPage(Number(e.target.value))}
-            >
-              {index + 1}
-            </button>
-          ))
-        }
-      </div>
-      <SelectQuantityPerPage />
+      <Pagination pages={pages} setCurrentPage={setCurrentPage} />
+      <SelectQuantityPerPage itensPerPage={itensPerPage} setItemPerPage={setItemPerPage} />
     </div>
   );
 }

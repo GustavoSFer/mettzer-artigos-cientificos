@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
-import MyContext from '../MyContext/MyContext';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function SelectQuantityPerPage() {
-  const { itensPerPage, setItemPerPage } = useContext(MyContext);
+function SelectQuantityPerPage({ itensPerPage, setItemPerPage }) {
   return (
     <select value={itensPerPage} onChange={(e) => setItemPerPage(Number(e.target.value))}>
       <option value={5}>5</option>
@@ -11,5 +10,10 @@ function SelectQuantityPerPage() {
     </select>
   );
 }
+
+SelectQuantityPerPage.propTypes = {
+  itensPerPage: PropTypes.number.isRequired,
+  setItemPerPage: PropTypes.func.isRequired,
+};
 
 export default SelectQuantityPerPage;

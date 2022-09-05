@@ -1,6 +1,7 @@
 import React from 'react';
 import { screen, render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import userEvent from '@testing-library/user-event';
 import Main from '../Pages/Main';
 import MyContext from '../MyContext/MyContext';
 
@@ -33,5 +34,22 @@ describe('Verificando tela de Principal, se os elementos estão na tela', () => 
     renderPage(context);
     const btnPesquisar = screen.getByTestId('btn-pesquisar');
     expect(btnPesquisar).toBeInTheDocument();
+  });
+});
+
+describe('Verificando comportamento da tela principal', () => {
+  it('Verificando se ao clicar no pesquisar aparece o componente "Loading..."', () => {
+    renderPage(context);
+    const inputSearch = screen.getByTestId('search');
+    const btnPesquisar = screen.getByTestId('btn-pesquisar');
+
+    userEvent.type(inputSearch, 'discovery');
+    userEvent.click(btnPesquisar);
+
+    const title = screen.getByRole('heading', {
+      level: 2,
+      name: /Carregando/i,
+    });
+    expect(title).toBeInTheDocument();
   });
 });

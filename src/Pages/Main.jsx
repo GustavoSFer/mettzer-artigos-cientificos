@@ -15,7 +15,7 @@ function Main() {
   const {
     data, setData,
     pages, itensPerPage, setItemPerPage,
-    currentItens, setCurrentPage,
+    currentItens, setCurrentPage, currentPage,
   } = useContext(MyContext);
   // const [page, setPage] = useState(1);
 
@@ -48,8 +48,16 @@ function Main() {
           }
         </div>
       </div>
-      <Pagination pages={pages} setCurrentPage={setCurrentPage} />
-      <SelectQuantityPerPage itensPerPage={itensPerPage} setItemPerPage={setItemPerPage} />
+      <div className="d-flex justify-content-evenly m-5">
+        <div />
+        <div>
+          <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        </div>
+        <div>
+          <span>Quantidade por paginas</span>
+          <SelectQuantityPerPage itensPerPage={itensPerPage} setItemPerPage={setItemPerPage} />
+        </div>
+      </div>
     </div>
   );
 }

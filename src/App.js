@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState([]);
   const [getFavorites, setFavorites] = useState([]);
   const [alter, setAlter] = useState(false);
-  const [itensPerPage, setItemPerPage] = useState(5);
+  const [itensPerPage, setItemPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(0);
 
   const pages = Math.ceil(data.length / itensPerPage);
@@ -54,7 +54,7 @@ function App() {
     alter,
     pages, itensPerPage,
     currentItens, setCurrentPage,
-    setItemPerPage,
+    setItemPerPage, currentPage,
   };
 
   return (

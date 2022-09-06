@@ -31,7 +31,7 @@ function Card({ item }) {
 
         <p className="text-start" style={{ fontSize: '12px' }}>
           type:
-          <span style={{ fontSize: '16px' }}>
+          <span className="fw-semibold" style={{ fontSize: '16px' }}>
             {` ${item._type}`}
           </span>
         </p>
@@ -41,22 +41,38 @@ function Card({ item }) {
         <h6 className="card-subtitle mt-4 text-muted">
           {item._source.description !== null && item._source.description.slice(0, 170)}
         </h6>
-        <Link to={`/detais/${item._source.id}`} item={item}>
-          <p className="text-end mt-2" style={{ fontSize: '12px' }}>
+
+        <Link
+          to={`/detais/${item._source.id}`}
+          item={item}
+          className="text-decoration-none"
+        >
+          <p className="text-end mt-2 text-secondary" style={{ fontSize: '12px' }}>
             Ver detalhes...
           </p>
         </Link>
-        <p className="card-text text-start" style={{ fontSize: '12px' }}>
-          Author:
-          <span style={{ fontSize: '16px' }}>{` ${item._source.authors[0]}`}</span>
-        </p>
 
-        <p className="text-start">
-          {
-            item._source.urls.length > 0
-            && <a href={item._source.urls[0]} className="card-link" target="_blank" rel="noopener noreferrer">Acessar Url</a>
-          }
+        <p className="card-text text-start m-0" style={{ fontSize: '12px' }}>
+          Author:
+          <span className="fw-semibold" style={{ fontSize: '16px' }}>{` ${item._source.authors[0]}`}</span>
         </p>
+        {
+          item._source.urls.length > 0
+            && (
+            <p className="text-start m-0" style={{ fontSize: '12px' }}>
+              Realizar:
+              <a
+                href={item._source.urls[0]}
+                className="card-link text-decoration-none ps-2 fw-semibold"
+                style={{ fontSize: '16px' }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Dowload
+              </a>
+            </p>
+            )
+        }
 
         <div className="text-end">
           <Button click={() => (isFavorite ? removeLocalStorage(item) : addLocalStorage(item))}>

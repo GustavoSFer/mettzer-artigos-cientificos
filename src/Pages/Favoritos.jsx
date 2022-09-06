@@ -5,9 +5,6 @@ import MyContext from '../MyContext/MyContext';
 import Pagination from '../Components/Pagination';
 import SelectQuantityPerPage from '../Components/SelectQuantityPerPage';
 
-// import Button from '../Components/Button';
-// import coracao2 from '../imagens/coracao2.png';
-
 function Favoritos() {
   const {
     getFavorites,
@@ -36,11 +33,18 @@ function Favoritos() {
         <div className="d-flex justify-content-between m-5">
           <div />
           <div>
-            <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            <Pagination
+              pages={pages}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
           </div>
           <div>
             <span>Quantidade por paginas</span>
-            <SelectQuantityPerPage itensPerPage={itensPerPage} setItemPerPage={setItemPerPage} />
+            <SelectQuantityPerPage
+              itensPerPage={itensPerPage}
+              setItemPerPage={setItemPerPage}
+            />
           </div>
         </div>
 

@@ -30,6 +30,7 @@ function Main() {
     <div className="corpo-color">
       <Header />
       <div className="container">
+
         <div className="mt-4 container-ver">
           <Input
             type="text"
@@ -37,9 +38,17 @@ function Main() {
             handleChange={(e) => setSearch(e.target.value)}
             value={search}
           />
-          <Button click={handleClick} sty="m-3" dataTestId="btn-pesquisar">Pesquisar</Button>
+          <Button
+            click={handleClick}
+            sty="m-3"
+            dataTestId="btn-pesquisar"
+          >
+            Pesquisar
+          </Button>
         </div>
+
         { loading && (<Loading />) }
+
         <div className="row m-1">
           {
             data.length > 0 && currentItens
@@ -47,14 +56,22 @@ function Main() {
           }
         </div>
       </div>
+
       <div className="d-flex justify-content-between m-5">
         <div />
         <div>
-          <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+          <Pagination
+            pages={pages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
         <div>
           <span>Quantidade por paginas</span>
-          <SelectQuantityPerPage itensPerPage={itensPerPage} setItemPerPage={setItemPerPage} />
+          <SelectQuantityPerPage
+            itensPerPage={itensPerPage}
+            setItemPerPage={setItemPerPage}
+          />
         </div>
       </div>
     </div>

@@ -25,8 +25,8 @@ function Login() {
 
   return (
     <main className="container-login container position-absolute top-50 start-50 translate-middle">
-      <h1 className="">Login</h1>
-      <section className="">
+      <h1>Login</h1>
+      <section>
         <Input
           type="text"
           name="email"
@@ -42,13 +42,24 @@ function Login() {
         <p className="text-end min-password">
           {`Caracteres minimo para senha: ${MIN_PASSWORD_LANGTH}`}
         </p>
-        <Button click={handleClick} sty="w-100" dataTestId="btn-entrar">Entrar</Button>
+        <Button
+          click={handleClick}
+          sty="w-100"
+          dataTestId="btn-entrar"
+        >
+          Entrar
+        </Button>
         { msgErro && <p className="">E-mail ou senha incorreto!</p> }
       </section>
       <p className="txt-cadastro">
         Não possui cadastro?
       </p>
-      <Button click={() => history('/registration')} sty="w-100"> Cadastrar</Button>
+      <Button
+        click={() => history('/registration')}
+        sty="w-100"
+      >
+        Cadastrar
+      </Button>
     </main>
   );
 }

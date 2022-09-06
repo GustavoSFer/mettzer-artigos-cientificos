@@ -11,6 +11,7 @@ const context = {
   getFavorites: [],
   pages: 0,
   setItemPerPage: 6,
+  setCurrentPage: 6,
 };
 
 function renderPage(myContext) {
@@ -46,10 +47,10 @@ describe('Verificando comportamento da tela principal', () => {
     userEvent.type(inputSearch, 'discovery');
     userEvent.click(btnPesquisar);
 
-    const title = screen.getByRole('heading', {
+    const loading = screen.getByRole('heading', {
       level: 2,
       name: /Carregando/i,
     });
-    expect(title).toBeInTheDocument();
+    expect(loading).toBeInTheDocument();
   });
 });

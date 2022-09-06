@@ -39,7 +39,7 @@ function Main() {
           />
           <Button click={handleClick} sty="m-3" dataTestId="btn-pesquisar">Pesquisar</Button>
         </div>
-        { loading && <Loading /> }
+        { loading && (<Loading />) }
         <div className="row m-1">
           {
             data.length > 0 && currentItens

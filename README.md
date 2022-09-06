@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Bem vindo!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objetivo do projeto:
+  * Realizar buscar por artigos científicos na API do portal CORE.
+  * Exibir a listagem com o tido do artigo cientifico; Autores; título e a descrição.
+  * Possível marcar e desmarcar o artigo como favorito.
+  * Página de favoritos e ela deve estar disponível mesmo
+que a janela do navegador seja fechada e aberta novamente.
+  * As listagens, tanto da pesquisa quanto dos favoritos, devem ter paginação.
 
-## Available Scripts
+## Tecnologias utilizadas
+- React
+- React-router-dom
+- Dotenv
+- React test library
 
-In the project directory, you can run:
+<br><br><br>
 
-### `npm start`
+  # Instruções para iniciar o projeto
+  1 - Clone o repositório
+  * Chave SSH
+    * git clone git@github.com:GustavoSFer/mettzer-artigos-cientificos.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  * Chave HTTPS
+    * git clone https://github.com/GustavoSFer/mettzer-artigos-cientificos.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  * Entre na pasta do repositório que você acabou de clonar:
+    * cd mettzer-artigos-cientificos
 
-### `npm test`
+2 - Instale as dependências e inicialize o projeto
+  * Instale as dependências:
+    * npm install
+  
+  * Inicialize o projeto: 
+    * npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br><br>
 
-### `npm run build`
+**⚠️ IMPORTANTE! ⚠️**
+# Utilizando o projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Página de login
+  * E-mail e senha, apenas para validações. O sistema não possui banco de dados(Back-end), qualquer e-mail valido e senha acima de 5 caracteres serão aceitos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```
+  Exemplo um usuário e senha (fulana@gmail.com - fulana123@)
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Pagina de cadastro
+  * Apenas para validações qualquer informação valida serão aceitos.
+  ```
+  Exemplo: (Fulana - fulana@gmail.com - fulana123@)
+  ```
 
-### `npm run eject`
+## Página principal
+  * O usuário pode escrever na barra de busca e apertar em "Pesquisar". Será feito a busca das informações na API.
+  * Com o resultado o usuário pode marcar os cards como favoritos.
+  * É possível escolher a quantidade de item que será mostrado por pagina.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Página de favoritos
+  * Será mostrados todos os artigos científicos que foram salvos como favoritos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Página de detalhes
+  * Ao clicar no card será exibido alguma outras informações, como outros autores 
+  e contribuições.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  <br> <br>
+  
+  # Gostou do projeto?
+   Deixe uma estrelinha :)
+   
+   Melhorias e sugestão, fique a vontade para me chamar!

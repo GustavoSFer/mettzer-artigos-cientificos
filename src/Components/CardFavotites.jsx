@@ -25,20 +25,20 @@ function CardFavorites({ item }) {
   };
   return (
     <div className="card col-3 m-2" style={width}>
-      <Link to={`/detais/${item.id}`} className="text-decoration-none">
-        <div className="card-body">
+      <div className="card-body">
+        <Link to={`/detais/${item.id}`} className="text-decoration-none">
           <h5 className="card-title text-body">{item.title}</h5>
           <h6 className="card-subtitle mt-4 text-muted">
             {item.description}
           </h6>
+        </Link>
 
-          <div className="text-end">
-            <Button click={() => remover(item)}>
-              <img src={coracao2} alt="favoritar" />
-            </Button>
-          </div>
+        <div className="text-end">
+          <Button click={() => remover(item)}>
+            <img src={coracao2} alt="favoritar" />
+          </Button>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

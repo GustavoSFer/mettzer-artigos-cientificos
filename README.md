@@ -1,8 +1,8 @@
 # Bem vindo!
 
 ## Objetivo do projeto:
-  * Realizar buscar por artigos científicos na API do portal CORE.
-  * Exibir a listagem com o tido do artigo cientifico; Autores; título e a descrição.
+  * Realizar busca por artigos científicos na API do portal CORE.
+  * Exibir a listagem com o tipo do artigo cientifico; Autores; título e a descrição.
   * Possível marcar e desmarcar o artigo como favorito.
   * Página de favoritos e ela deve estar disponível mesmo
 que a janela do navegador seja fechada e aberta novamente.

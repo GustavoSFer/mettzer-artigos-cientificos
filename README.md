@@ -40,14 +40,14 @@ que a janela do navegador seja fechada e aberta novamente.
 # Utilizando o projeto
 
 ## Página de login
-  * E-mail e senha, apenas para validações. O sistema não possui banco de dados(Back-end), qualquer e-mail valido e senha acima de 5 caracteres serão aceitos.
+  * E-mail e senha, apenas para validações. O sistema não possui banco de dados(Back-end), qualquer e-mail válido e senha acima de 5 caracteres serão aceitos.
 
   ```
   Exemplo um usuário e senha (fulana@gmail.com - fulana123@)
   ```
 
-## Pagina de cadastro
-  * Apenas para validações qualquer informação valida serão aceitos.
+## Página de cadastro
+  * Apenas para validações qualquer informação válida serão aceitos.
   ```
   Exemplo: (Fulana - fulana@gmail.com - fulana123@)
   ```
@@ -55,13 +55,13 @@ que a janela do navegador seja fechada e aberta novamente.
 ## Página principal
   * O usuário pode escrever na barra de busca e apertar em "Pesquisar". Será feito a busca das informações na API.
   * Com o resultado o usuário pode marcar os cards como favoritos.
-  * É possível escolher a quantidade de item que será mostrado por pagina.
+  * É possível escolher a quantidade de item que será mostrado por página.
 
 ## Página de favoritos
-  * Será mostrados todos os artigos científicos que foram salvos como favoritos.
+  * Serão mostrados todos os artigos científicos que foram salvos como favoritos.
 
 ## Página de detalhes
-  * Ao clicar no card será exibido alguma outras informações, como outros autores 
+  * Ao clicar no card será exibido algumas outras informações, como outros autores 
   e contribuições.
 
   <br> <br>
